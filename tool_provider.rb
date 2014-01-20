@@ -133,7 +133,7 @@ post '/assessment' do
   @tp = IMS::LTI::ToolProvider.new(key, $oauth_creds[key], session['launch_params'])
 
   if !@tp.outcome_service?
-    show_error "This tool wasn't lunched as an outcome service"
+    show_error "This tool wasn't launched as an outcome service"
     return erb :error
   end
 
